@@ -10,8 +10,9 @@ package capitulo5_excepciones;
  * @author T-101
  */
 public class ValorMenorDeEdadException extends Exception{
-    
+    public ValorMenorDeEdadException (){
+    super("NO PUEDO DAR DE ALTA A UN MENOR DE 18");
+    }
     
 
-    
-}
+    }

@@ -18,12 +18,18 @@ public class probarMiExepcion {
         
         try {
             cliente c= new cliente();
-            c.setEdad(-89);
+            c.setEdad(17);
            
-        } catch (Exception ex) {
+        } 
+        catch (ValorNoNegativoException ex) {
+            System.out.println(ex.getMessage());
+        }
+        catch (ValorMenorDeEdadException ex) {
             System.out.println(ex.getMessage());
         }
         
-        
+        finally{
+        System.out.println("Este se ejecuta se lance o no la e");
+        }
     }
 }

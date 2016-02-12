@@ -52,9 +52,10 @@ public class cliente {
     /**
      * @param edad the edad to set
      */
-    public void setEdad(int edad) throws ValorNoNegativoException {
-        ValidarEdad val=new ValidarEdad();
-        val.checarEdadNegativa(edad);
+    public void setEdad(int edad) throws ValorNoNegativoException, ValorMenorDeEdadException {
+      //  
+        ValidarEdad.checarEdadNegativa(edad);
+        ValidarEdad.checarMenorDeEdad(edad);
         this.edad = edad;
     }
     
